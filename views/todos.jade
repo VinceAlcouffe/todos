@@ -1,0 +1,15 @@
+//first basic model of the todos view
+//this code iterates over list of todos (that was passed by the route handler)
+//and displays each item using the li tag
+
+extends layout
+
+block content
+  h1= title
+  ul
+    each val in todos
+      //li= val //this was for first design
+      //the below add checkboxes 
+      li
+        input(type='checkbox')
+        span= val

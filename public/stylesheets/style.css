@@ -1,0 +1,21 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  /*background-color: red*/
+}
+
+a {
+  color: #00B7FF;
+}
+
+/*reomve the bullet style formatting for list*/
+/* target the ul list tag,add a new style to disable the formatting*/
+ul {
+  list-style-type: none;
+}
+
+/* adding a new selector
+that will decorate the span element of a checked list element*/
+.checked span {
+  text-decoration: line-through;
+}

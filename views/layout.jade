@@ -1,0 +1,11 @@
+//existing link tag that's pointing to /stylesheets/style.css.
+//this means that style.css will load for every page as its part of the layout.
+
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+    block content
+    script(src='/javascripts/script.js') //added for sourcing a basic script for animations
