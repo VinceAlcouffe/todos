@@ -3,6 +3,9 @@
 var todos = [
   'buy flight tickets',
   'book a hotel room',
-  'pack your bags'
+  'pack your bags',
+  'another one for fun',
+  'yet another one',
+  "ENCORE"
 ];
 module.exports = todos;

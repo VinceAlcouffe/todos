@@ -3,14 +3,24 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "node ./bin/www",
+    "dev": "nodemon .bin/www"
   },
   "dependencies": {
+    "browserify-middleware": "^8.1.1",
     "cookie-parser": "~1.4.3",
     "debug": "~2.6.9",
     "express": "~4.16.0",
+    "express-handlebars": "^3.0.2",
     "http-errors": "~1.6.2",
     "jade": "~1.11.0",
-    "morgan": "~1.9.0"
+    "jquery": "^3.4.0",
+    "morgan": "~1.9.0",
+    "node-sass-middleware": "^0.11.0"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.26.3",
+    "connect-browser-sync": "^2.1.0",
+    "nodemon": "^1.18.11"
   }
 }

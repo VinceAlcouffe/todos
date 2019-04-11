@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Todos</title>
+  <link rel="stylesheet" href="../stylesheets/style.css">
+</head>
+<body>
+  <!-- take header.hbs as defined in views/partials-->
+  {{>header}} <!-- no space here, mean {>text are all to be sticked-->
+  <!-- take body as defined in views/todos views/index etc-->
+  {{{body}}}
+  <!-- take body as defined in views/todos views/index etc-->
+  <!-- adding jQuery. When pages will load, the jQuery lib will be loaded from the google hosting infra-->
+  <!-- below is a very old jQuery lib.  the current lib version is 3.3.1, while below we use 2.1.4-->
+  <!-- the follwoing two lines are to be "removed" as we now use Browserify to bundle scripts-->
+  <!-- so layout.hbs need to point to the browserify-ied bundle.js-->
+  <!--
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src='/javascripts/script.js'></script>
+  -->
+  <!-- adding this line instead for pointing to browserify-ied bundle.js-->
+  <script src='/javascripts/bundle.js'></script>
+</body>
+</html>
