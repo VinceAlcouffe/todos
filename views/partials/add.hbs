@@ -1,0 +1,40 @@
+
+
+<!--
+
+<form id="add-todo-form" action="#" method="post">
+  <input type="text"  id="add-todo-text" value="" placeholder="Add a Todo">
+  <input type="button" value="add">
+</form>
+
+removing old code, to be replaced by below one for RWD purposes
+<html>
+-->
+
+
+<!--
+We here style our todo form with these changes:
+1.	Add a div that wraps the form's inputs and give it a class form-group
+2.	Add the class input-group to the div, so we can add the button inline to the text field
+3.	Wrap the button with a span with class input-group-btn
+-->
+<form action="#" method="post">
+  <div class="form-group input-group">
+    <input id="add-todo-text" class="form-control" type="text" value="" placeholder="Add a Todo">
+    <span class="input-group-btn">
+      <input class="btn btn-default" type="button" value="add">
+    </span>
+  </div>
+</form>
+
+<!--
+Action normally specifies the file/page that the form is submitted to
+(using the method described in the method paramater (post, get etc.))
+
+An action of # indicates that the form stays on the same page,
+simply suffixing the url with a #.
+
+Similar use occurs in anchors. <a href=#">Link</a> for example, will stay on the same page.
+
+Thus, the form is submitted to the same page, which then processes the data etc.
+-->

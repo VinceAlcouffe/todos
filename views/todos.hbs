@@ -1,13 +1,60 @@
+<!--
+<p>this code runs with promises</p>
+<p>welcome to the SDFSDFFSD app</p>
+<p>welcome to the {{title}} app</p>
+-->
+
+<br>
+
+<!--
+Updating below code with Isomorphoc Views
+Thus updating to use the todo partial
 <ul>
   {{#each todos}}
   <li>
-    <input type="checkbox">
-    <span>{{this}}</span>
+  >{{this}}</span>
+    <input type="checkbox" {{#if this.done}}checked{{/if}}>
+    <span class="{{#if this.done}}checked{{/if}}">{{this.text}}</span>
   </li>
   {{/each}}
 </ul>
+-->
 
-<br>
-<br>
-
+<!-- <p>Welcome to the {{title}} page </p> -->
+<!-- {{title}} is "defined" in routes/todos -->
 <p>welcome to the {{title}} app</p>
+
+<br>
+
+<!--
+Update the markup in views/todos.hbs to show the retrieved records.
+As we have updated our schema ie models  to have
+the text as well as the done property,
+we need to slightly edit our todos.hbs view as well.
+We add a if check in handlebars for the done property,
+and if it's true then we add a checked attribute to our checkbox input tag.
+We update the span tag to retrieve the text from the text property of the model,
+and also add a checked class if it's done.
+<input type="checkbox" {{#if this.done}}checked{{/if}}>
+<span class="{{#if this.done}}checked{{/if}}">{{this.text}}</span>
+-->
+
+<!--
+FINAL ITERATION
+We will style (with boostrap) our todo list with these changes:
+1.	Wrap the outermost div with a container class
+2.	Wrap the div within it with a well class and a todos class
+3.	Add the list-group class to ul
+Here is the new code for views/todos.hbs:
+-->
+<div class="container">
+  <div class="well todos">
+    {{>add}}
+    <ul class="list-group">
+      {{#each todos}}
+        {{>todo this}}
+      {{/each}}
+    </ul>
+    {{>footer}}
+  </div>
+</div>

@@ -1,13 +1,22 @@
 <!DOCTYPE html>
+<!--
+Add language to the html tag (refer Bootstrap Docs - HTML5 doctype) for responsively designed websites
 <html>
+-->
+<html lang="en">
 <head>
   <meta charset="UTF-8">
+  <!--
+  Add viewport tag in the head tag (refer Bootstrap Docs - Mobile first) for responsively designed websites
+  <html>
+  -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Todos</title>
   <link rel="stylesheet" href="../stylesheets/style.css">
 </head>
 <body>
   <!-- take header.hbs as defined in views/partials-->
-  {{>header}} <!-- no space here, mean {>text are all to be sticked-->
+  {{>header}} <!-- no space here, mean {>text are all to be sticked; we are adding here the header/hbs partial -->
   <!-- take body as defined in views/todos views/index etc-->
   {{{body}}}
   <!-- take body as defined in views/todos views/index etc-->

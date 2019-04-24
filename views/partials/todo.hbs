@@ -1,0 +1,31 @@
+<!--
+When working on the code to add new todos,
+we have observed that the HTML to add the new todo is the same as that we are using to generate
+the list of todos on the server.
+/views/todos.hbs was similar to /client/script.js
+So we now adding Isomorphic Views (code sharing between server and client)
+-->
+
+
+
+<!--
+As we are going to be sending an AJAX request to edit a single todo,
+we will need to pass the todo id to the API.
+Let's go ahead and add an id to the html of our todo.
+Edit partials/todo.hbs to add the id to each list item (li).
+<li id="{{this._id}}" class="{{#if this.done}}checked{{/if}}">
+-->
+
+<!--
+Update the items : FINAL CODE
+We will style our todo items with these changes:
+1.	Add list-group-item class to li
+2.	Replace the delete link (x) with a trash can icon & text-align it to the right
+Here is the new code for views/partials/todo.hbs:
+-->
+
+<li id="{{this._id}}" class="list-group-item {{#if this.done}}checked{{/if}}">
+  <input type="checkbox" {{#if this.done}}checked{{/if}}>
+  <span contenteditable="true">{{this.text}}</span>
+  <a class="pull-right"><small><i class="glyphicon glyphicon-trash"></i></small></a>
+</li>
