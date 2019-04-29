@@ -1,3 +1,6 @@
+
+// create CRUD (Create Read Update Delete) API endpoints to add, fetch, update and remove a single todo from our todo list.
+
 var express = require('express');
 var router = express.Router();
 

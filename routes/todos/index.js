@@ -74,11 +74,5 @@ router.get('/', function(req, res, next) {
 // The response object (res) specifies the HTTP response which is sent by an Express app when it gets an HTTP request.
 
 
-
-
-
-
-
-
 //still keep the follwing line of course
 module.exports = router;

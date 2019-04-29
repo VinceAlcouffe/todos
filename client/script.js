@@ -1,5 +1,5 @@
 
-// FIRST TRIAL
+//FIRST TRIAL
 //Adding interactions
 //Public/javascript folder for interactions
 //Adding a basic alert - see below
@@ -11,11 +11,9 @@
 //script(src='/javascripts/script.js')
 
 // removing , was for above practicing
-
 //alert('Hello Todos!')
 
-
-// SECOND TRIAL
+//SECOND TRIAL
 //add JavaScript that will run every time a user clicks on a checkbox
 //checboxes here refer to the views/todos.hbs checkboxes
 //see :: input(type='checkbox') in todos.jade views
@@ -29,14 +27,12 @@
 //add or remove the 'checked' css class from the span tag (next element sibling),
 //based on whether the checkbox is selected or de-selected.
 //see the span into todos.jade view
-//parent node is val? I dont know
 //NOT HERE (but instead into styles.css)
 //Finally, let's edit style.css to
 //add a new selector at the bottom of the existing styles,
 //that will decorate the span element of a checked list element:
 
 //*** code for 2nd trial
-
 //document.addEventListener("DOMContentLoaded", function(event) {
   //var checkboxes = document.getElementsByTagName('input');
   //for (var i = 0; i < checkboxes.length; i++) {
@@ -51,7 +47,6 @@
     //this.parentNode.className = '';
   //}
 //}
-
 //*** end of code for 2nd trial
 
 // THIRD TRIAL
@@ -59,7 +54,7 @@
 // by below jQuery equivalent code
 // note jQuery has been added into views/layouts/layout.hbs
 
-//// Third Trial Bis
+//// THIRD TRIAL Bis
 //// Require jQuery
 /// In order to use jQuery, need to first install it as a dependency.
 /// in a terminal : npm install jquery --save
@@ -70,7 +65,7 @@ var $ = require('jquery');
 var todoTemplate = require("../views/partials/todo.hbs");
 
 //The jQuery syntax is tailor-made for selecting HTML elements and performing
-// some action on the element(s).
+//some action on the element(s).
 //Basic syntax is: $(selector).action()
 //$ sign to define/access jQuery
 //(selector) to "query (or find)" HTML elements
@@ -134,7 +129,6 @@ $('ul').on('change', 'li :checkbox', function() {
   });
 });
 
-
 // UPDATE A TODO TEXT
 $('ul').on('keydown', 'li span', function(e) {
   var $this = $(this),
@@ -197,11 +191,11 @@ $(".clear").on("click", function() {
 
 });
 
-// keep a live count of todos,
+// KEEP A LIVE COUNT OF TODOS
 // detect any insertion or deletions of todos in the list and,
 // update the count on any change.
-// Such functionality is provided by a Mutation Observer and,
-//Add an observer in script.js to watch our Todos for changes
+// Such functionality is provided by a Mutation Observer,
+// Add an observer in script.js to watch our Todos for changes
 var initTodoObserver = function () {
   var target = $('ul')[0];
   var config = { attributes: true, childList: true, characterData: true };
@@ -262,8 +256,6 @@ var addTodo = function() {
     }
   });
 };
-
-
 
 // add the updateTodo function, where we will make the AJAX call
 var updateTodo = function(id, data, cb) {

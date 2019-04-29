@@ -14,6 +14,7 @@ var mongoose = require('mongoose');
 //Add a require for Sass midlleware to be able to use Saas as the CSS pre processor
 var sassMiddleware = require('node-sass-middleware');
 
+//SETUP Browserify
 //Browserify provides a module system for client side JavaScript.
 //Much like using NPM modules in Node.js on the server,
 //Browserify enables us to use NPM modules in Javascript on the browser.
@@ -24,6 +25,10 @@ var sassMiddleware = require('node-sass-middleware');
 //note: Instead of adding jQuery through a script tag like we did before,
 //we will replace it with a require('jquery') it via Browserify.
 var browserify = require('browserify-middleware');
+
+
+
+
 
 var path = require('path');
 var cookieParser = require('cookie-parser');
@@ -93,15 +98,11 @@ app.use (
   })
 );
 
-
+// ICI
 // now adding a Handlebars transform for Browserify in app.js, for Isomorphic Views
 browserify.settings({
   transform: ['hbsfy']
 });
-
-
-
-
 
 //Browserify setup
 //Setup Browserify to load the script.js from the client directory in our project
@@ -126,10 +127,10 @@ app.get('/javascripts/bundle.js', browserify('./client/script.js'));
 if (app.get('env') === 'development') {
   var browserSync = require('browser-sync');
   var config = {
-    files: ["public/**/*.{js,css}", "client/*.js", "sass/**/*.scss", "views/**/*.hbs"],
+    files: ["public/**/*.{js,css}", "client/*.js", "sass/**/*.scss", "views/**/*.hbs", "views/*.hbs"],
     logLevel: 'debug',
     logSnippet: false,
-    reloadDelay: 300,
+    reloadDelay: 30,
     reloadOnRestart: true
   };
   var bs = browserSync(config);
